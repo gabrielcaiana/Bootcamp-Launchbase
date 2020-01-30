@@ -1,6 +1,6 @@
 const alunosA = [{
         nome: 'Gabriel',
-        nota: 8
+        nota: 4.9
     },
     {
         nome: 'Gisely',
@@ -29,7 +29,7 @@ const alunosB = [{
         nota: 10
     }, {
         nome: 'Fulano',
-        nota: 6
+        nota: 2
     }
 ]
 
@@ -53,5 +53,28 @@ function enviaMensagem(media, turma) {
     }
 }
 
+function marcarComoReprovado(aluno) {
+    aluno.reprovado = false
+    if (aluno.nota < 5) {
+        aluno.reprovado = true
+    }
+}
+
+function enviarMensagemReprovado(aluno) {
+    if (aluno.reprovado) {
+        console.log(`O aluno ${aluno.nome} está reprovado!`)
+    }
+}
+
+function alunosReprovado(alunos) {
+    for (let aluno of alunos) {
+        marcarComoReprovado(aluno)
+        enviarMensagemReprovado(aluno)
+    }
+}
+
 enviaMensagem(mediaAlunosA, 'TurmaA')
 enviaMensagem(mediaAlunosB, 'TurmaB')
+
+alunosReprovado(alunosA)
+alunosReprovado(alunosB)
