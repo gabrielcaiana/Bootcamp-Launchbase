@@ -11,20 +11,22 @@ const user = {
 }
 
 function createTransactions(type, value) {
-    if (type === 'credit') {
-        user.transactions.push({
-            type: type,
-            value: value
-        })
-        return (user.balance += value)
-    } else if (type === 'debit') {
-        user.transactions.push({
-            type: type,
-            value: value
-        })
-        return (user.balance -= value);
-    }
+    user.transactions.push({
+        type: type,
+        value: value
+    })
+    return type === 'credit' ? (user.balance += value) : (user.balance -= value)
+    // if (type === 'credit') {
+    
+    // } else if (type === 'debit') {
+    //     user.transactions.push({
+    //         type: type,
+    //         value: value
+    //     })
+    //     return (user.balance -= value);
+    // }
 }
 createTransactions('credit', 124)
 createTransactions('debit', 4)
+createTransactions('credit', 12)
 console.log(user)
