@@ -1,3 +1,8 @@
+@import "https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,900&display=swap";
+:root {
+    --color-green: #50fa7b;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -7,6 +12,7 @@
 body {
     background-color: #282a36;
     font-family: 'Source Sans Pro', sans-serif;
+    color: white;
 }
 
 header {
@@ -15,11 +21,11 @@ header {
     background: rgba(0, 0, 0, 0.1);
 }
 
-header div {
+.links {
     text-align: center;
 }
 
-header div a {
+.links a {
     color: #fff;
     text-decoration: none;
     font-size: 18px;
@@ -27,7 +33,48 @@ header div a {
     margin: 0 16px;
 }
 
-header div a:hover {
-    color: #50fa7b;
+.links a:hover {
+    color: var(--color-green);
     transition: color 200ms;
+}
+
+#wrapper {
+    text-align: center;
+    padding: 32px;
+}
+
+#wrapper img {
+    border-radius: 50%;
+    border: 5px solid var(--color-green);
+    margin-bottom: 32px;
+    height: 250px;
+}
+
+#wrapper h1 {
+    font-size: 42px;
+    line-height: 52px;
+    font-weight: 700;
+}
+
+#wrapper h2 {
+    font-size: 24px;
+    line-height: 34px;
+    font-weight: 500;
+    margin-top: 8px;
+}
+
+#wrapper p {
+    max-width: 500px;
+    margin: 32px auto;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+#wrapper p a {
+    color: var(--color-green);
+    text-decoration: none;
+}
+
+#links-footer a {
+    border-bottom: 1px solid var(--color-green);
 }
