@@ -1,34 +1,181 @@
-@import "https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap";
-* {
-    margin: 0;
-    padding: 0;
-}
-
-:root {
-    --color-white: #fff;
-    --color-green: #50fa7b;
-}
-
-body {
-    background-color: #0B0A0D;
-    font-family: 'Roboto', sans-serif;
-}
-
-header {
-    background-color: #111116;
-    height: 30px;
-    padding: 30px;
-    text-align: center;
-}
-
-header a {
-    margin: 30px;
-    text-decoration: none;
-    color: var(--color-white);
-    font-weight: 600;
-    transition: color 200ms;
-}
-
-header a:hover {
-    color: var(--color-green);
-}
+    @import "https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap";
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+     :root {
+        --color-white: #fff;
+        --color-green: #50fa7b;
+        --color-rocket: #7159C1;
+        --color-orange: #fd951f;
+    }
+    
+    body {
+        background-color: #0B0A0D;
+        font-family: 'Roboto', sans-serif;
+    }
+    
+    header {
+        background-color: #111116;
+        height: 30px;
+        padding: 30px;
+        text-align: center;
+    }
+    
+    header a {
+        margin: 30px;
+        text-decoration: none;
+        color: var(--color-white);
+        font-weight: 600;
+        transition: color 200ms;
+    }
+    
+    header a:hover {
+        color: var(--color-green);
+    }
+    /* ==== About ====*/
+    
+    #about {
+        color: var(--color-white);
+        text-align: center;
+        padding: 30px;
+    }
+    
+    #about img {
+        border: 5px solid var(--color-green);
+        border-radius: 50%;
+        width: 150px;
+        margin: 30px 0;
+    }
+    
+    #about h1 {
+        font-size: 42px;
+        line-height: 52px;
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+    
+    #about p {
+        font-size: 24px;
+        line-height: 24px;
+        font-weight: 300;
+        margin-bottom: 30px;
+    }
+    
+    #about ul {
+        list-style: none;
+        margin-bottom: 20px;
+    }
+    
+    #about ul li {
+        display: inline;
+        padding: 5px;
+    }
+    
+    #about .links a {
+        text-decoration: none;
+        color: var(--color-white);
+        padding: 5px;
+        margin: 0 10px;
+        border-bottom: 1px solid var(--color-green);
+    }
+    
+    #about .links a:hover {
+        color: var(--color-green);
+        transition: color 200ms;
+    }
+    /* ==== Conteúdo ====*/
+    
+    #content {
+        text-align: center;
+        color: var(--color-white);
+        padding: 30px;
+    }
+    
+    .courses {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        margin-top: 60px;
+    }
+    
+    .starter,
+    .lauchbase,
+    .gostack {
+        width: 350px;
+        height: 500px;
+        background-color: rgba(255, 255, 255, 0.05);
+        padding: 30px;
+        border-radius: 10px;
+        margin: 0 10px;
+        box-sizing: border-box;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transition: transform .2s;
+    }
+    
+    .starter:hover {
+        transform: scale(1.05);
+    }
+    
+    .lauchbase:hover {
+        transform: scale(1.05);
+    }
+    
+    .gostack:hover {
+        transform: scale(1.05);
+    }
+    
+    .course__modulos {
+        margin: 20px 0;
+        color: rgb(185, 185, 185);
+    }
+    
+    .starter .course__price__purchase {
+        color: var(--color-rocket);
+        border: 1px solid var(--color-rocket);
+        width: 200px;
+        padding: 10px;
+        border-radius: 10px;
+        transition: color 400ms;
+        cursor: pointer;
+    }
+    
+    .starter .course__price__purchase:hover {
+        background-color: var(--color-rocket);
+        color: #fff;
+    }
+    
+    .lauchbase .course__price__purchase {
+        color: var(--color-orange);
+        border: 1px solid var(--color-orange);
+        width: 200px;
+        padding: 10px;
+        border-radius: 10px;
+        transition: color 400ms;
+        cursor: pointer;
+    }
+    
+    .lauchbase .course__price__purchase:hover {
+        background-color: var(--color-orange);
+        color: #fff;
+    }
+    
+    .gostack .course__price__purchase {
+        color: var(--color-green);
+        border: 1px solid var(--color-green);
+        width: 200px;
+        padding: 10px;
+        border-radius: 10px;
+        transition: color 400ms;
+        cursor: pointer;
+    }
+    
+    .gostack .course__price__purchase:hover {
+        background-color: var(--color-green);
+        color: #fff;
+    }
