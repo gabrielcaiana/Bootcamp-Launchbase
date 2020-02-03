@@ -15,8 +15,10 @@ const closeModal = document.querySelector('.close-modal').addEventListener('clic
 
 const modal = document.querySelector(".modal")
 const iconMax = modal.querySelector(".maximize-modal")
+let maximize = modal.classList.contains('maximize')
 let maxModal = modal.querySelector(".maximize-modal").addEventListener("click", function() {
-    modal.classList.contains('maximize')
-    modal.classList.add("maximize")
-    modal.classList.remove("maximize")
+    if(maximize === false) {
+        modal.classList.add('maximize')
+    }
 })
+console.log(maximize)
