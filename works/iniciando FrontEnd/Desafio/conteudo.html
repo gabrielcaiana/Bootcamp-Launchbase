@@ -8,6 +8,7 @@
     <title>Index</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="./image/favicon.ico" type="image/x-icon" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body>
@@ -22,23 +23,43 @@
     <section id="content">
         <h1>Conteúdos</h1>
         <div class="courses">
-            <div class="starter">
+            <div id="starter" class="course">
                 <img src="./image/starter.svg" alt="Starter">
                 <p class="course__modulos">3 Módulos</p>
                 <a class="course__price__purchase">Gratuito</a>
             </div>
-            <div class="lauchbase">
+            <div id="launchbase" class="course">
                 <img src="./image/lauchbase.svg" alt="LauchBase">
                 <p class="course__modulos">8 Módulos</p>
                 <p class="course__price__purchase">Comprar</p>
             </div>
-            <div class="gostack">
+            <div id="gostack" class="course">
                 <img src="./image/gostack.svg" alt="GoStack">
                 <p class="course__modulos">10 Módulos</p>
                 <p class="course__price__purchase">Comprar</p>
             </div>
         </div>
     </section>
+
+    <div class="modal-overlay">
+        <div class="modal">
+            <a class="maximize-modal">
+                <i class="material-icons">
+                    maximize
+                </i>
+            </a>
+            <a class="close-modal">
+                <i class="material-icons">close</i>
+            </a>
+
+            <div class="modal-content">
+                <iframe src="" frameborder="0"></iframe>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="app.js"></script>
 </body>
 
 </html>

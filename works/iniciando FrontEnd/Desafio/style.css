@@ -91,18 +91,21 @@
         text-align: center;
         color: var(--color-white);
         padding: 30px;
+        width: 100%;
+        box-sizing: border-box;
     }
     
     .courses {
         width: 100%;
         display: grid;
+        justify-items: center;
         grid-template-columns: 1fr 1fr 1fr;
         margin-top: 60px;
     }
     
-    .starter,
-    .lauchbase,
-    .gostack {
+    #starter,
+    #launchbase,
+    #gostack {
         width: 350px;
         height: 500px;
         background-color: rgba(255, 255, 255, 0.05);
@@ -118,24 +121,24 @@
         transition: transform .2s;
     }
     
-    .starter:hover {
+    #starter:hover {
         transform: scale(1.05);
     }
     
-    .lauchbase:hover {
+    #launchbase:hover {
         transform: scale(1.05);
     }
     
-    .gostack:hover {
+    #gostack:hover {
         transform: scale(1.05);
     }
     
-    .course__modulos {
+    #course__modulos {
         margin: 20px 0;
         color: rgb(185, 185, 185);
     }
     
-    .starter .course__price__purchase {
+    #starter .course__price__purchase {
         color: var(--color-rocket);
         border: 1px solid var(--color-rocket);
         width: 200px;
@@ -145,12 +148,12 @@
         cursor: pointer;
     }
     
-    .starter .course__price__purchase:hover {
+    #starter .course__price__purchase:hover {
         background-color: var(--color-rocket);
         color: #fff;
     }
     
-    .lauchbase .course__price__purchase {
+    #launchbase .course__price__purchase {
         color: var(--color-orange);
         border: 1px solid var(--color-orange);
         width: 200px;
@@ -160,12 +163,12 @@
         cursor: pointer;
     }
     
-    .lauchbase .course__price__purchase:hover {
+    #launchbase .course__price__purchase:hover {
         background-color: var(--color-orange);
         color: #fff;
     }
     
-    .gostack .course__price__purchase {
+    #gostack .course__price__purchase {
         color: var(--color-green);
         border: 1px solid var(--color-green);
         width: 200px;
@@ -175,7 +178,65 @@
         cursor: pointer;
     }
     
-    .gostack .course__price__purchase:hover {
+    #gostack .course__price__purchase:hover {
         background-color: var(--color-green);
         color: #fff;
+    }
+    /* ==== Modal ==== */
+    
+    .modal-overlay {
+        background-color: rgba(0, 0, 0, 0.7);
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        opacity: 0;
+        visibility: hidden;
+    }
+    
+    .modal {
+        background-color: #fff;
+        width: 90%;
+        height: 90%;
+        margin: 5vh auto;
+        position: relative;
+    }
+    
+    .maximize {
+        background-color: #fff;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        margin: 0;
+        top: 0;
+    }
+    
+    .maximize-modal {
+        color: black;
+        position: absolute;
+        right: 42px;
+        top: 17px;
+        cursor: pointer;
+    }
+    
+    .modal .close-modal {
+        color: black;
+        position: absolute;
+        right: 8px;
+        top: 8px;
+        cursor: pointer;
+    }
+    /* ==== Modal Active ==== */
+    
+    .modal-overlay.active {
+        opacity: 1;
+        visibility: visible;
+    }
+    /* ==== Iframe ====*/
+    
+    iframe {
+        width: 100%;
+        height: 90%;
+        top: 5%;
+        position: absolute;
     }
