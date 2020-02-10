@@ -19,7 +19,7 @@ nunjucks.configure('views', {
 
 //configurando rota index
 server.get('/', function(req, res) {
-    return res.render('index')
+    return res.render('about')
 })
 
 //configurando rota portfolio
