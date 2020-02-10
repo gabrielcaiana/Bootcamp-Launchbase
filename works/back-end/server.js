@@ -10,7 +10,7 @@ const server = express()
 server.use(express.static('public'))
 
 //configurando engine nunjucks
-server.set('view engine', 'html')
+server.set('view engine', 'njk')
 
 //configurando caminho para engine
 nunjucks.configure('views', {
