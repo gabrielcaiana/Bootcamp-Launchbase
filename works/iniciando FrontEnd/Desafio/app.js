@@ -1,5 +1,7 @@
 const modalOverlay = document.querySelector('.modal-overlay')
 const courses = document.querySelectorAll('.course')
+const modal = document.querySelector(".modal")
+const iconMax = modal.querySelector(".maximize-modal")
 
 for (let course of courses) {
     course.addEventListener('click', function() {
@@ -13,12 +15,18 @@ const closeModal = document.querySelector('.close-modal').addEventListener('clic
     modalOverlay.classList.remove('active')
 })
 
-const modal = document.querySelector(".modal")
-const iconMax = modal.querySelector(".maximize-modal")
+
 let maximize = modal.classList.contains('maximize')
+
 let maxModal = modal.querySelector(".maximize-modal").addEventListener("click", function() {
-    if(maximize === false) {
+    if (maximize === false) {
         modal.classList.add('maximize')
+
     }
 })
-console.log(maximize)
+
+// if (modal.classList.contains('maximize')) {
+//     modal.querySelector(".maximize-modal").addEventListener("click", function() {
+//         modal.classList.remove('maximize')
+//     })
+// }
