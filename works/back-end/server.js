@@ -17,9 +17,14 @@ nunjucks.configure('views', {
     express: server
 })
 
-//configurando rota 
+//configurando rota index
 server.get('/', function(req, res) {
     return res.render('index')
+})
+
+//configurando rota portfolio
+server.get('/portfolio', function(req, res) {
+    return res.render('portfolio')
 })
 
 //iniciando servidor na porta 5000
