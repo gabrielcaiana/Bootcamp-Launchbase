@@ -13,20 +13,20 @@ for (let course of courses) {
 
 const closeModal = document.querySelector('.close-modal').addEventListener('click', function() {
     modalOverlay.classList.remove('active')
+    modal.classList.remove('maximize')
 })
 
+const modal = document.querySelector(".modal")
+const iconMax = modal.querySelector(".maximize-modal")
 
-let maximize = modal.classList.contains('maximize')
-
-let maxModal = modal.querySelector(".maximize-modal").addEventListener("click", function() {
-    if (maximize === false) {
-        modal.classList.add('maximize')
-
-    }
-})
-
-// if (modal.classList.contains('maximize')) {
-//     modal.querySelector(".maximize-modal").addEventListener("click", function() {
-//         modal.classList.remove('maximize')
-//     })
-// }
+function maximizar(param) {
+    iconMax.addEventListener('click', function() {
+        const modalMaximize = modal.classList.contains('maximize')
+        if (!modalMaximize) {
+            param.classList.add('maximize')
+        } else {
+            param.classList.remove('maximize')
+        }
+    })
+}
+maximizar(modal)
