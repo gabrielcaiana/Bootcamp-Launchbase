@@ -19,9 +19,13 @@ server.get('/about', function(req, res) {
     return res.render('about')
 })
 
-server.use(function(req, res) {
-    res.status(404).render("not-found");
-});
+server.get('*', function(req, res) {
+    res.render('not-found')
+})
+
+// server.use(function(req, res) {
+//     res.status(404).render("not-found");
+// });
 
 server.listen(7000, function() {
     console.log('Hello World')
