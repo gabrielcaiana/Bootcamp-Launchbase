@@ -3,6 +3,9 @@ const express = require('express')
     //importando nunjucks
 const nunjucks = require('nunjucks')
 
+const videos = require('./data')
+console.log(videos)
+
 //configurando servidor
 const server = express()
 
@@ -24,10 +27,10 @@ server.get('/', function(req, res) {
 
 //configurando rota portfolio
 server.get('/portfolio', function(req, res) {
-    return res.render('portfolio')
+    return res.render('portfolio', { items: videos })
 })
 
 //iniciando servidor na porta 5000
-server.listen(5000, function() {
+server.listen(8000, function() {
     console.log("Server is Running")
 })
