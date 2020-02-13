@@ -17,7 +17,8 @@ server.set('view engine', 'njk')
 //configurando caminho para engine
 nunjucks.configure('views', {
     express: server,
-    autoescape: false // corrige erro do nunjucks ao passar código HTML direto dentro de objetos
+    autoescape: false, // corrige erro do nunjucks ao passar código HTML direto dentro de objetos
+    noCache: true // limpa o cache do navegador
 })
 
 //configurando rota index

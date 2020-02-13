@@ -2,13 +2,15 @@ module.exports = [{
         id: "7A4UQGrFU9Q",
         title: "Iniciando com React.JS",
         duration: "48 min",
-        price: "Free"
+        price: "Free",
+        featured: true
     },
     {
         id: "GSqR2i-Pq6o",
         title: "Desvendando a variável This",
         duration: "14 min",
-        price: "Free"
+        price: "Free",
+        featured: true
     },
     {
         id: "2alg7MQ6_sI",
@@ -32,6 +34,7 @@ module.exports = [{
         id: "Rt-xG_VzD6M",
         title: "CLI do Zero com Node + Gluegun",
         duration: "36 min",
-        price: "Free"
+        price: "Free",
+        featured: true
     }
 ]
