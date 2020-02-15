@@ -182,3 +182,11 @@ iframe {
     top: 128px;
     border-radius: 10px;
 }
+
+
+/* ==== VIDEO PAGE ==== */
+
+.video {
+    margin: 0 auto;
+    max-width: 800px;
+}

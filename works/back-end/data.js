@@ -16,7 +16,8 @@ module.exports = [{
         id: "2alg7MQ6_sI",
         title: "Git e Github na prática",
         duration: "36 min",
-        price: "Free"
+        price: "Free",
+        featured: true
     },
     {
         id: "ghTrp1x_1As",

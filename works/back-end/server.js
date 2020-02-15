@@ -39,7 +39,28 @@ server.get('/', function(req, res) {
 
 //configurando rota portfolio
 server.get('/portfolio', function(req, res) {
-    return res.render('portfolio', { items: videos })
+    return res.render('portfolio', { items: videos }) // eu também posso passar a palavra "{videos direto}", pois é o mesmo nome da variavel
+})
+
+//configurando rota Videos
+server.get('/video', function(req, res) {
+    const id = req.query.id
+
+    //configurando método para encontrar videos e armazenar na variavel - 
+    const video = videos.find(function(video) {
+        //se o id do video na url for igual do encontrado retorna true
+        if (video.id == id) {
+            return true
+        }
+    })
+
+    //se o video não for encontrado, será retornada a mensagem abaixo 
+    if (!video) {
+        return res.send('video not found!')
+    }
+
+    //se encontrado, ele irá renderizar a pagina abaixo recebendo a variavel video com o video encontrado
+    return res.render('video', { item: video })
 })
 
 //iniciando servidor na porta 5000
