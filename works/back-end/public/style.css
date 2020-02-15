@@ -190,3 +190,15 @@ iframe {
     margin: 0 auto;
     max-width: 800px;
 }
+
+.card__video-container {
+    position: relative;
+    padding-top: 60%;
+}
+
+.card__video-container iframe {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    position: absolute;
+}
