@@ -49,6 +49,7 @@ server.get('/video', function(req, res) {
     //configurando método para encontrar videos e armazenar na variavel - 
     const video = videos.find(function(video) {
         //se o id do video na url for igual do encontrado retorna true
+        //opção para um código menor "return video.id == id" automaticamente já é um código boolean
         if (video.id == id) {
             return true
         }
