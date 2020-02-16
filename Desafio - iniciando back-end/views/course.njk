@@ -6,11 +6,12 @@
 
 <section id="content">
     <h1 class="titleCourse">{{courses.id}}</h1>
+    <p class="course-description">{{courses.description}}</p>
     <div class="pageCourse">
         <div id="{{courses.id}}" class="course">
             <img src="{{courses.logo}}" alt="Starter">
             <p class="course__modulos">{{courses.module}}</p>
-            <a class="course__price__purchase">{{courses.price}}</a>
+            <a target="_blank" href="{{courses.site}}" class="course__price__purchase">{{courses.action}}</a>
         </div>
     </div>
 </section>

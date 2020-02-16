@@ -152,6 +152,7 @@
         border-radius: 10px;
         transition: color 400ms;
         cursor: pointer;
+        text-decoration: none;
     }
     
     #starter .course__price__purchase:hover {
@@ -167,6 +168,7 @@
         border-radius: 10px;
         transition: color 400ms;
         cursor: pointer;
+        text-decoration: none;
     }
     
     #launchbase .course__price__purchase:hover {
@@ -182,6 +184,8 @@
         border-radius: 10px;
         transition: color 400ms;
         cursor: pointer;
+        text-decoration: none;
+        ;
     }
     
     #gostack .course__price__purchase:hover {
@@ -255,5 +259,10 @@
     }
     
     .titleCourse {
-        margin-bottom: 40px;
+        margin-bottom: 20px;
+    }
+    
+    .course-description {
+        margin-bottom: 30px;
+        font-size: 20px;
     }
