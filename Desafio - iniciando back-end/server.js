@@ -3,7 +3,8 @@ const nunjucks = require("nunjucks")
 
 const server = express()
 
-const courses = require('./data')
+const courses = require('./courses')
+const user = require('./user')
 
 server.use(express.static('public'))
 
@@ -18,7 +19,7 @@ server.get('/', function(req, res) {
 })
 
 server.get('/about', function(req, res) {
-    return res.render('about')
+    return res.render('about', { user })
 })
 
 server.get('*', function(req, res) {
@@ -29,6 +30,6 @@ server.get('*', function(req, res) {
 //     res.status(404).render("not-found");
 // });
 
-server.listen(7000, function() {
+server.listen(9000, function() {
     console.log('Hello World')
 })

@@ -1,19 +1,20 @@
-{% extends "layout.njk" %} {% block content %}
-<section id="about">
-    <img src="https://avatars2.githubusercontent.com/u/28929274?s=400&v=4" alt="Logo rocketSeat">
-    <h1>Rocketseat</h1>
-    <p>As melhores tecnologias em programação, direto ao ponto e do jeito certo.</p>
-    <ul>
-        <li>React</li>
-        <li>React Native</li>
-        <li>NodeJS</li>
-    </ul>
+{% extends "layout.njk" %}
+{% block content %}
+    <section id="about">
+        <img src="{{user.photo}}" alt="Logo rocketSeat">
+        <h1>{{user.title}}</h1>
+        <p>{{user.description}}</p>
+        <ul>
+            {% for skill in user.skills %}
+                <li>{{ skill.name }}</li>
+            {% endfor %}
+        </ul>
 
-    <div class="links">
-        <a href="">Github</a>
-        <a href="">Instagram</a>
-        <a href="">Facebook</a>
-    </div>
+        <div class="links">
+            {%for link in user.links %}
+                <a target="_blank" href="{{link.url}}">{{link.name}}</a>
+            {% endfor %}
+        </div>
 
-</section>
+    </section>
 {% endblock %}
