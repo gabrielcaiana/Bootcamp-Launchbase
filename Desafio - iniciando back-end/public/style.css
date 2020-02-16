@@ -246,3 +246,14 @@
         top: 5%;
         position: absolute;
     }
+    /* ==== PAGE COURSE ====*/
+    
+    .pageCourse {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .titleCourse {
+        margin-bottom: 40px;
+    }

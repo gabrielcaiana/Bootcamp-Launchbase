@@ -1,0 +1,17 @@
+{% extends "layout.njk" %}
+{% block header %}
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+{% endblock %}
+{% block content %}
+
+<section id="content">
+    <h1 class="titleCourse">{{courses.id}}</h1>
+    <div class="pageCourse">
+        <div id="{{courses.id}}" class="course">
+            <img src="{{courses.logo}}" alt="Starter">
+            <p class="course__modulos">{{courses.module}}</p>
+            <a class="course__price__purchase">{{courses.price}}</a>
+        </div>
+    </div>
+</section>
+{% endblock %}

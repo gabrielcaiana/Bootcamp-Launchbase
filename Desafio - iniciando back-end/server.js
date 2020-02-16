@@ -14,13 +14,31 @@ nunjucks.configure('views', {
     express: server
 })
 
+server.get('/about', function(req, res) {
+    return res.render('about', { user })
+})
+
 server.get('/', function(req, res) {
     return res.render('courses', { courses })
 })
 
-server.get('/about', function(req, res) {
-    return res.render('about', { user })
+server.get('/:id', function(req, res) {
+    const id = req.params.id
+
+    const myCourse = courses.find(function(myCourse) {
+        if (myCourse.id == id) {
+            return true
+        }
+    })
+
+    if (!myCourse) {
+        return res.render('not-found')
+    }
+
+    return res.render('course', { courses: myCourse })
+
 })
+
 
 server.get('*', function(req, res) {
     res.render('not-found')

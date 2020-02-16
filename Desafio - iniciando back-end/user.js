@@ -11,5 +11,5 @@ module.exports = {
         { name: 'Github', url: 'https://github.com/gabrielcaiana' },
         { name: 'Instagram', url: 'https://www.instagram.com/guedescgabriel/' },
         { name: 'Facebook', url: 'https://web.facebook.com/gabriel.caiana.33?_rdc=1&_rdr' }
-    ],
+    ]
 }
