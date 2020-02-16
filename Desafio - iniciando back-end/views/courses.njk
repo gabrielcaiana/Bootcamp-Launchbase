@@ -7,21 +7,13 @@
 <section id="content">
     <h1>Conteúdos</h1>
     <div class="courses">
-        <div id="starter" class="course">
-            <img src="./image/starter.svg" alt="Starter">
-            <p class="course__modulos">3 Módulos</p>
-            <a class="course__price__purchase">Gratuito</a>
+    {%for course in courses %}
+        <div id="{{course.id}}" class="course">
+            <img src="{{course.logo}}" alt="Starter">
+            <p class="course__modulos">{{course.module}}</p>
+            <a class="course__price__purchase">{{course.price}}</a>
         </div>
-        <div id="launchbase" class="course">
-            <img src="./image/lauchbase.svg" alt="LauchBase">
-            <p class="course__modulos">8 Módulos</p>
-            <p class="course__price__purchase">Comprar</p>
-        </div>
-        <div id="gostack" class="course">
-            <img src="./image/gostack.svg" alt="GoStack">
-            <p class="course__modulos">10 Módulos</p>
-            <p class="course__price__purchase">Comprar</p>
-        </div>
+        {% endfor %}
     </div>
 </section>
 

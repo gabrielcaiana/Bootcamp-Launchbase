@@ -3,6 +3,8 @@ const nunjucks = require("nunjucks")
 
 const server = express()
 
+const courses = require('./data')
+
 server.use(express.static('public'))
 
 server.set('view engine', 'njk')
@@ -12,7 +14,7 @@ nunjucks.configure('views', {
 })
 
 server.get('/', function(req, res) {
-    return res.render('courses')
+    return res.render('courses', { courses })
 })
 
 server.get('/about', function(req, res) {

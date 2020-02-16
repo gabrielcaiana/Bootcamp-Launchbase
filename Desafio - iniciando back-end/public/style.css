@@ -105,7 +105,8 @@
         display: grid;
         justify-items: center;
         grid-template-columns: 1fr 1fr 1fr;
-        margin-top: 60px;
+        max-width: 1200px;
+        margin: 60px auto 0;
     }
     
     #starter,
