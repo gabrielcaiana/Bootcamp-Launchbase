@@ -188,7 +188,8 @@ iframe {
 
 .video {
     margin: 0 auto;
-    max-width: 800px;
+    max-width: 700px;
+    padding-bottom: 60px;
 }
 
 .card__video-container {
