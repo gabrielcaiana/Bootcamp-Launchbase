@@ -16,11 +16,12 @@
         font-family: 'Roboto', sans-serif;
     }
     
-    header {
+    header,footer {
         background-color: #111116;
         height: 30px;
         padding: 30px;
         text-align: center;
+        color: white;
     }
     
     header a {
@@ -33,6 +34,11 @@
     
     header a:hover {
         color: var(--color-green);
+    }
+
+    footer span {
+        font-size: 13px;
+        color: #f2f2f2;
     }
     
     h1 {
